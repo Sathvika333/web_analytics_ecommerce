@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - YourStore</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+        .contact-info, .social-media {
+            margin-top: 20px;
+        }
+        .contact-info p, .social-media p {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+        .social-media a {
+            color: #007bff;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+        .social-media a:hover {
+            text-decoration: underline;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        label {
+            font-size: 14px;
+            color: #333;
+        }
+        input, textarea, button {
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+        #submit-message {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Contact Us</h1>
+        <p>We’re here to answer any questions and assist with any issues you may have. Please feel free to reach out using any of the options below.</p>
+        
+        <!-- Contact Form -->
+        <form id="contact-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="phone">Phone (optional):</label>
+            <input type="tel" id="phone" name="phone">
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject" required>
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+            
+            <button type="submit">Submit</button>
+        </form>
+        
+        <!-- Submission Message -->
+        <p id="submit-message">Thank you! Your message has been submitted.</p>
+        
+        <!-- Contact Information -->
+        <div class="contact-info">
+            <p><strong>Email:</strong> support@yourstore.com</p>
+            <p><strong>Phone:</strong> +1 (234) 567-8901</p>
+            <p><strong>Hours of Operation:</strong> Monday - Friday, 9 AM - 5 PM (EST)</p>
+        </div>
+        
+        <!-- Social Media Links -->
+        <div class="social-media">
+            <p>Connect with us on social media:</p>
+            <a href="https://www.facebook.com/yourstore" target="_blank">Facebook</a>
+            <a href="https://www.twitter.com/yourstore" target="_blank">Twitter</a>
+            <a href="https://www.instagram.com/yourstore" target="_blank">Instagram</a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle form submission
+        document.getElementById("contact-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting the traditional way
+            document.getElementById("submit-message").style.display = "block"; // Show the submitted message
+            document.getElementById("contact-form").reset(); // Optional: Reset form fields
+        });
+    </script>
+
+</body>
+</html>
