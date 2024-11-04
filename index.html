@@ -3691,6 +3691,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </script>
 
+
+  <button id="select-item">Select Item</button>
+    <script>
+document.getElementById("select-item").addEventListener("click", function() {
+    gtag('event', 'select_item', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics'
+    });
+});
+</script>
+
   
 </body>
 
