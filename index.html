@@ -3703,6 +3703,29 @@ document.getElementById("select-item").addEventListener("click", function() {
 });
 </script>
 
+<button id="add-to-cart">Add to Cart</button>
+<script>
+document.getElementById("add-to-cart").addEventListener("click", function() {
+    gtag('event', 'add_to_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics',
+        'price': 499.99,
+        'quantity': 1
+    });
+});
+</script>
+
+<button id="remove-from-cart">Remove from Cart</button>
+<script>
+document.getElementById("remove-from-cart").addEventListener("click", function() {
+    gtag('event', 'remove_from_cart', {
+        'item_id': 'item_001',
+        'item_name': 'Sample Smartphone',
+        'category': 'Electronics'
+    });
+});
+</script>
 
  
 </body>
